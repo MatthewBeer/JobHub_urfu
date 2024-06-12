@@ -254,6 +254,8 @@ label {
     color: white;
     font-size: 20px;
     padding: 30px 0 280px 20px;
+    background: none;
+    overflow:auto;
 }
 .form_project{
 /* width: 1050px; */

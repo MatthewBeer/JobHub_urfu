@@ -238,6 +238,8 @@ label {
     /* height: 98px !important; */
     margin-bottom: 0;
     padding: 20px 0 80px 10px;
+    background: none;
+    color: #fff;
 }
 .profile2 {
     width: 196px;
