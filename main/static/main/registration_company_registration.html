@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <title>Register</title>
+              <style>
+    html, body {
+    font-family: "Manrope", sans-serif;
+    color: #fff;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url("./font/Manrope-VariableFont_wght.ttf");
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+
+}
+
+
+.container {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 0 0;
+}
+
+body {
+    padding: 20px;
+    background: #000;
+}
+
+
+.register {
+    height: 1060px;
+    background: #000 url("{% static 'main/images/register-background2.png' %}") no-repeat center center fixed;
+    background-size: contain;
+}
+
+.register__inner {
+    padding-top: 60px;
+}
+
+.register__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2%;
+    padding-bottom: 9%;
+}
+
+.register__title {
+    font-weight: 600;
+    font-size: 60px;
+    margin-left: 115px;
+}
+
+.register__logo {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.register__form {
+    display: flex;
+    flex-direction: column;
+    gap: 6vh;
+    max-width: 40%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+.register__text {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+.register__pass {
+    width: 100%;
+    background: none;
+    border-bottom: 1px solid #fff;
+    font-size: 20px;
+    color: #fff;
+    padding: 15px 0px;
+}
+
+.register__button {
+    display: flex;
+    justify-content: center;
+}
+.register__btnC {
+    border-radius: 33px;
+    width: 260px;
+    padding: 20px 0px;
+    font-size: 20px;
+    color: #fff;
+    transition: .3s;
+    background: #000
+}
+
+.register__btnC:hover {
+    color: #000;
+    background: #fff;
+}
+
+.register_company__input {
+    width: 100%;
+    background: none;
+    border-bottom: 1px solid #fff;
+    font-size: 20px;
+    color: #fff;
+    padding: 15px 0px;
+}
+
+              </style>
+</head>
+<body>
+    <div class="wrapper">
+        <main>
+            <section class="register">
+                <div class="container">
+                    <div class="register__inner">
+                        <div class="register__top">
+                            <h1 class="register__title">Регистрация</h1>
+                            <a href="home/" class="register__logo">JobHub</a>
+                        </div>
+                        <form class="register__form">
+                            <div class="register__name_company">
+                                <label class="register__text">Название компании</label>
+                                <input type="text" class="register_company__input">
+                            </div>
+                            <div class="register_login">
+                                <label class="register__text">Логин</label>
+                                <input type="text" class="register_company__input">
+                            </div>
+                            <div class="register__password">
+                                <label class="register__text">Пароль</label>
+                                <input type="password" class="register__pass">
+                            </div>
+                            <div class="register__button">
+                                <button class="register__btnC">Зарегистрироваться</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

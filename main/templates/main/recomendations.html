@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <title>Recomendations</title>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .recomendations {
+            background-color: #0F0F0F;
+            margin: 0 0;
+            padding: 0 0;
+            background-image: url("{% static 'main/img/recomendations-background.png' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .user-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            padding: 0;
+            margin: 0;
+        }
+        .user {
+            cursor: pointer;
+            padding: 80px;
+        }
+        .user li {
+            padding: 5px 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="recomendations">
+    <div class="wrapper">
+        <div class="header_rec">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="recomendations__top">
+                        <a href="{% url 'home' %}" class="header__logo">JobHub</a>
+                        <nav class="header__nav">
+                            <a href="#" class="header__link">Фильтры</a>
+                            <a href="{% url 'recomendationcompanies' %}" class="header__link">Компании</a>
+                            <a href="#" class="header__link">О нас</a>
+                        </nav>
+                        <div class="header__icons">
+                            <img src="{% static 'main/images/search.png' %}" alt="Search" class="header__search" />
+                            <a href="{% url 'addpage' %}" class="header__profile">Профиль</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="users_colon">
+                    <ul class="users_list">
+                        {% for student in students %}
+                        <a href="{% url 'student_detail' student.pk %}" class="user-link">
+                            <li class="user">
+                                <img src="{% static 'main/img/user_image.png' %}" class="user_image" alt="Фотография профиля">
+                                <ul>
+                                    <li class="user_info">
+                                        <ul class="username">
+                                            <li><p class="name">{{ student.surname }} {{ student.name }}</p></li>
+                                            <li><p class="ID">{{ student.telegram }}</p></li>
+                                        </ul>
+                                    </li>
+                                    <li class="specs">
+                                        <ul>
+                                            <li><p>Специализация: {{ student.profession }}</p></li>
+                                            <li><p>Опыт: {{ student.experience }}</p></li>
+                                        </ul>
+                                    </li>
+                                    <li class="present_text">
+                                        <p>{{ student.about }}</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </a>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

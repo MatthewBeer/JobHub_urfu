@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/style1.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <title>{{ student.name }} {{ student.surname }}</title>
+    <style>
+        @font-face {
+             font-family: 'Manrope';
+             src: url("{% static 'main/font/Manrope-VariableFont_wght.ttf' %}");
+         }
+        html, body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .wrapper {
+            background-color: #0F0F0F;
+            margin: 0 0;
+            padding: 0 0;
+            background-image: url("{% static 'main/img/Group 43.png' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="page_1">
+            <header>
+                <div class="logo"><a href="{% url 'home' %}">JobHub</a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="{% url 'recomendation' %}">Фильтры</a></li>
+                        <li><a href="{% url 'recomendationcompanies' %}">Компании</a></li>
+                        <li><a href="#">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="search_profile">
+                    <div class="search-box">
+                        <button class="btn-search"><img src="{% static 'main/icon/searchIcon.svg' %}" alt="search-icon"></button>
+                        <input type="text" class="input-search" placeholder="">
+                    </div>
+                    <div class="profile"><a href="{% url 'addpage' %}">Профиль</a></div>
+                </div>
+            </header>
+            <div class="content">
+                <div class="account">
+                    <img src="{% static 'main/img/user_image.png' %}" alt="{{ student.name }}">
+                    <div class="name">{{ student.surname }} {{ student.name }}</div>
+                    <div class="name_2">{{ student.telegram }}</div>
+                    <div class="information_acc">
+                        <div class="data">
+                            <img src="{% static 'main/icon/Group 45.png' %}" alt="">
+                            <p style="margin-left: 20px">{{ student.dateOfBirth }}</p>
+                        </div>
+                        <div class="loco">
+                            <img src="{% static 'main/icon/Group 45 (1) (1).png' %}" alt="">
+                            <p style="margin-left: 20px">{{ student.city }}</p>
+                        </div>
+                        <div class="email">
+                            <img src="{% static 'main/icon/Group 46.png' %}" alt="">
+                            <p style="margin-left: 20px">{{ student.email }}</p>
+                        </div>
+                    </div>
+                    <div class="social_icon">
+                        <img src="{% static 'main/icon/Group 48.svg' %}" alt="">
+                        <img src="{% static 'main/icon/Group 49.svg' %}" alt="">
+                        <img src="{% static 'main/icon/Group 48 (1).svg' %}" alt="">
+                        <img src="{% static 'main/icon/Group 48 (2).svg' %}" alt="">
+                    </div>
+                </div>
+                <div class="personal_information_ready_prof">
+                    <div class="title_pers_inf">
+                        <p><a href="{% url 'student_detail' student.pk %}">Личная информация</a></p>
+                        <p style="margin-left: 80px"><a href="#">Проекты</a></p>
+                    </div>
+                    <form>
+                        <div class="name_surname">
+                            <label for="">Фамилия</label>
+                            <p class="pers_inf">{{ student.surname }}</p>
+                            <label for="">Имя</label>
+                            <p class="pers_inf">{{ student.name }}</p>
+                            <label for="">Дата рождения</label>
+                            <p class="pers_inf">{{ student.dateOfBirth }}</p>
+                            <label for="">Почта</label>
+                            <p class="pers_inf">{{ student.email }}</p>
+                        </div>
+                        <div class="social_media">
+                            <label for="">Специализация </label>
+                            <p class="pers_inf">{{ student.profession }}</p>
+                            <label for="">Опыт</label>
+                            <p class="pers_inf">{{ student.experience }}</p>
+                            <label style="margin-bottom: 10px" for="">О себе</label>
+                            <p class="end_pers_inf">{{ student.about }}</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/29d8323478.js" crossorigin="anonymous"></script>
+</body>
+</html>

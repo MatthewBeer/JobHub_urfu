@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link type="text/css" href="{% static 'main/css/style.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JobHub</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__top">
+                        <div class="header__menu">
+                            <a href="index.html" class="header__logo">JobHub</a>
+                            <nav class="header__nav">
+                                <a href="#" class="header__link">Рекомендации</a>
+                                <a href="#" class="header__link">Компании</a>
+                                <a href="#" class="header__link">О нас</a>
+                            </nav>
+                        </div>
+                        <div class="header__icons">
+                            <img src="img/search.png" alt="search" class="header__search">
+                            <a href="register.html" class="header__profile">Профиль</a>
+                        </div>
+                    </div>
+                    <div class="header__content">
+                        <h1 class="header__title">Stand Out: Digital Portfolio Power by JubHub</h1>
+                        <p class="header__subtitle">Исследуйте молодые таланты: JobHub соединяет стажеров в области IT с ведущими компаниями.</p>
+                        <div class="header__buttons">
+                             <button onclick="window.location.href='submit_company_registration'">Регистрация для компаний</button>
+                             <button onclick="window.location.href='submit_student_registration'">Регистрация для студентов</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

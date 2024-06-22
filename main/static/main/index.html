@@ -1,0 +1,190 @@
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link type="text/css" href="{% static 'main/css/style.css' %}" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'main/css/reset.css' %}" rel="stylesheet"/>
+    <title>JobHub</title>
+    <style>
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background: #000 url("{% static 'main/images/main-background2.png' %}") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.header__inner {
+    position: relative;
+    z-index: 2;
+}
+
+.header__title, .header__subtitle, .header__button {
+    color: #fff;
+}
+
+
+.container {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 0 0;
+}
+
+
+.header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2%;
+    padding-bottom: 9%;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    column-gap: 230px;
+}
+
+.header__logo {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    column-gap: 35px;
+    font-weight: 400;
+}
+
+.header__link {
+    font-size: 20px;
+    transition: .3s;
+}
+
+.header__link:hover {
+    opacity: 0.5;
+}
+
+.header__icons {
+    display: flex;
+    align-items: center;
+}
+
+.header__search {
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.header__profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    border-radius: 33px;
+    background: #343e6c;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 20px 0px;
+}
+
+.header__title {
+    font-weight: 800;
+    font-size: clamp(1em, 80px, 5em);
+    margin-bottom: 35px;
+    max-width: 50%;
+    line-height: clamp(1vh, 150%, 10vh);
+}
+
+.header__subtitle {
+    font-size: clamp(1em, 20px, 5em);;
+    margin-bottom: 4%;
+    max-width: 450px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.header__content {
+    height: 100%;
+    display: inline-block;
+}
+
+.header__buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 45px;
+}
+
+.header__button {
+    width: 225px;
+    padding: 20px 0px;
+    border-radius: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.header__button:first-child {
+    background: #fff;
+    color: #000;
+}
+
+.header__button:first-child:hover {
+    background: #0f0f0f;
+    color: #fff;
+}
+
+.header__button:last-child {
+    background: #0f0f0f;
+}
+
+.header__button:last-child:hover {
+    background: #fff;
+    color: #000;
+}
+
+          </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__top">
+                        <div class="header__menu">
+                            <a href="home" class="header__logo">JobHub</a>
+                            <nav class="header__nav">
+                                <a href="recomendation" class="header__link">Рекомендации</a>
+                                <a href="#" class="header__link">Компании</a>
+                                <a href="#" class="header__link">О нас</a>
+                            </nav>
+                        </div>
+                        <div class="header__icons">
+                            <img src="{% static 'main/images/search.png' %}" alt="Search" class="header__search"/>
+                            <a href="studentregistration/" class="header__profile">Профиль</a>
+                        </div>
+                    </div>
+                    <div class="header__content">
+                        <h1 class="header__title">Stand Out: Digital Portfolio Power by JobHub</h1>
+                        <p class="header__subtitle">Исследуйте молодые таланты: JobHub соединяет стажеров в области IT с ведущими компаниями.</p>
+                        <div class="header__buttons">
+                            <a href="studentregistration/" class="header__button">Для студента</a>
+                            <a href="companyregistration/" class="header__button">Для компании</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
