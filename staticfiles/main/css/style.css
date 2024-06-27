@@ -1,0 +1,220 @@
+html, body {
+    font-family: "Manrope", sans-serif; 
+    color: #fff;
+    font-weight: 400;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1640px;
+    margin: 0 auto;
+    padding: 0 0;
+}
+
+body {
+    padding: 20px;
+    background: #000;
+}
+
+.header {
+    height: 1060px;
+    background: url(main/static/main/images/background-main.png) no-repeat;
+}
+
+.header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 130px;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    column-gap: 230px;
+}
+
+.header__logo {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    column-gap: 35px;
+}
+
+.header__link {
+    font-size: 20px;
+    transition: .3s;
+}
+
+.header__link:hover {
+    opacity: 0.5;
+}
+
+.header__icons {
+    display: flex;
+    align-items: center;
+}
+
+.header__search {
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.header__profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    border-radius: 33px;
+    background: #343e6c;
+    font-size: 20px;
+    padding: 20px 0px;
+}
+
+.header__title {
+    font-weight: 800;
+    font-size: 80px;
+    margin-bottom: 35px;
+    max-width: 730px;
+}
+
+.header__subtitle {
+    font-size: 20px;
+    margin-bottom: 70px;
+    max-width: 450px;
+}
+
+.header__buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 45px;
+}
+
+.header__button {
+    width: 225px;
+    padding: 20px 0px;
+    border-radius: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.header__button:first-child {
+    background: #fff;
+    color: #000;
+}
+
+.header__button:first-child:hover {
+    background: #0f0f0f;
+    color: #fff;
+}
+
+.header__button:last-child {
+    background: #0f0f0f;
+}
+
+.header__button:last-child:hover {
+    background: #fff;
+    color: #000;
+}
+
+.register {
+    height: 1060px;
+    background: url(main/static/main/images/background-register.png) no-repeat;
+}
+
+.register__inner {
+    padding-top: 60px;
+}
+
+.register__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 110px;
+}
+
+.register__title {
+    font-weight: 600;
+    font-size: 60px;
+    margin-left: 115px;
+}
+
+.register__logo {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.register__form {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    max-width: 620px;
+}
+
+.register__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.register__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.register__text {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.register__input {
+    width: 250px;
+    background: none;
+    border-bottom: 1px solid #fff;
+    font-size: 20px;
+    color: #fff;
+    padding: 15px 0px;
+}
+
+.register__pass {
+    width: 100%;
+    background: none;
+    border-bottom: 1px solid #fff;
+    font-size: 20px;
+    color: #fff;
+    padding: 15px 0px;
+}
+
+.register__button {
+    display: flex;
+    justify-content: center;
+}
+
+.register__btn {
+    border-radius: 33px;
+    width: 260px;
+    padding: 20px 0px;
+    font-size: 20px;
+    color: #000;
+    transition: .3s;
+}
+
+.register__btn:hover {
+    color: #fff;
+    background: #000;
+}
+
+
+

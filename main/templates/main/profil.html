@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/css/resets.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+    <title>Личная информация</title>
+    <style>
+        .form_column {
+            width: 48%;
+        }
+        .form_column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .form_column li {
+            margin-bottom: 10px;
+        }
+        .form_column label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form_container {
+            display: flex;
+            justify-content: space-between;
+            width: 800px;
+        }
+    </style>
+</head>
+<body class="profiles">
+    <div class="header__inner" id="main">
+        <div class="recomendations__top">
+            <a href="{% url 'home' %}" class="header__logo">JobHub</a>
+            <nav class="header__nav">
+                <a href="{% url 'recomendation' %}" class="header__link">Рекомендации</a>
+                <a href="{% url 'recomendationcompanies' %}" class="header__link">Компании</a>
+                <a href="#" class="header__link">О нас</a>
+            </nav>
+            <div class="header__icons">
+                <img src="{% static 'main/img/search.png' %}" alt="search" class="header__search">
+                <a href="#" class="header__profile_recomendations">Профиль</a>
+            </div>
+        </div>
+    </div>
+    <section class="profile_content">
+        <div class="user_notifications">
+            <div class="user_about">
+                <div class="opacity-helper">
+                    <img src="{% static 'main/icon/Group 55.png' %}" alt="" />
+                    <div class="naming">
+                        <p>Соколов Дмитрий</p>
+                        <p>@sokolD</p>
+                    </div>
+                    <ul class="notifications_list">
+                        <li class="el-1">25.03.2001</li>
+                        <li class="el-2">Екатеринбург</li>
+                        <li class="el-3">sokolD@mail.ru</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social_icons">
+                <img src="{% static 'main/icon/Group 48.svg' %}" width="40" alt="" />
+                <img src="{% static 'main/icon/Group 49.svg' %}" width="40" alt="" />
+                <img src="{% static 'main/icon/Group 48 (1).svg' %}" width="40" alt="" />
+                <img src="{% static 'main/icon/Group 48 (2).svg' %}" width="40" alt="" />
+            </div>
+        </div>
+        <div class="main_profile_content" style="width: 8000px;">
+            <div class="content_header_prof">
+                <a href="#">Личная информация</a>
+                <a href="#">Проекты</a>
+            </div>
+            <div class="content_profile">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form_container">
+                    <div class="form_column">
+                    <ul class="name_surname">
+                        <li>
+                            <label for="id_surname">Фамилия</label>
+                            {{ form.surname }}
+                        </li>
+                        <li>
+                            <label for="id_name">Имя</label>
+                            {{ form.name }}
+                        </li>
+                        <li>
+                            <label for="id_city">Город</label>
+                            {{ form.city}}
+                        </li>
+                        <li>
+                            <label for="id_email">Почта</label>
+                            {{ form.email }}
+                        </li>
+                        <li>
+                            <label for="id_profession">Специализация</label>
+                            {{ form.profession }}
+                        </li>
+                        <li>
+                            <label for="id_experience">Опыт</label>
+                            {{ form.experience }}
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="form_column">
+                    <ul class="social_media">
+                        <li>
+                            <label for="id_dateOfBirth">Дата рождения</label>
+                            {{ form.dateOfBirth }}
+                        </li>
+                        <li>
+                            <label for="id_telegram">Telegram</label>
+                            {{ form.telegram }}
+                        </li>
+                        <li>
+                            <label for="id_vk">ВКонтакте</label>
+                            {{ form.vk }}
+                        </li>
+                        <li>
+                            <label for="id_instagram">Instagram</label>
+                            {{ form.instagram }}
+                        </li>
+                        <li>
+                            <label for="id_whatsapp">WhatsApp</label>
+                            {{ form.whatsapp }}
+                        </li>
+                        <li>
+                            <label for="id_about">О себе</label>
+                            {{ form.about}}
+                        </li>
+                    </ul>
+                    <div class="save_prof_button">
+                        <button type="submit" class="save_prof_btn">Создать</button>
+                    </div>
+                        </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

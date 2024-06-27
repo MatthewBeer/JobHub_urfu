@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Register</title>
+     <style>
+         *{padding: 0;margin: 0;border: 0;}
+         *,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+         :focus,:active{outline: none;}
+         a:focus,a:active{outline: none;}
+         nav,footer,header,aside{display: block;}
+         html,body{
+             height:100%;width:100%;
+             font-size:100%;line-height:1;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+         input,button,textarea{font-family:inherit;}
+         input::-ms-clear{display: none;}
+         button{cursor: pointer;}
+         button::-moz-focus-inner{padding:0;border:0;}
+         a,a:visited{text-decoration: none;}
+         a:hover{text-decoration: none;}
+         ul li{list-style: none;}
+         img{vertical-align: top;}
+         h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+         a{color:inherit;}
+         html, body {
+             font-family: "Manrope", sans-serif;
+             color: #fff;
+             font-weight: 500;
+         }
+
+         @font-face {
+             font-family: Manrope;
+             src: url("{% static 'font/Manrope-VariableFont_wght.ttf' %}");
+         }
+
+         .wrapper_reg {
+             max-height: 125%;
+             width: 100%;
+             overflow: hidden;
+         }
+
+         .container {
+             max-width: 85%;
+             margin: 0 auto;
+             padding: 0 0;
+         }
+
+         body {
+             padding: 20px;
+             background: #000;
+         }
+
+         .register {
+             height: 1060px;
+             background: #000 url("{% static 'main/images/register-background2.png' %}") no-repeat center center fixed;
+             background-size: contain;
+         }
+
+         .register__inner {
+             padding-top: 60px;
+         }
+
+         .register__top {
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+             padding-top: 2%;
+             padding-bottom: 9%;
+         }
+
+         .register__title {
+             font-weight: 600;
+             font-size: 60px;
+             margin-left: 115px;
+         }
+
+         .register__logo {
+             font-weight: 600;
+             font-size: 25px;
+         }
+
+         .register__form {
+             display: flex;
+             flex-direction: column;
+             gap: 6vh;
+             max-width: 40%;
+             -webkit-box-sizing: border-box;
+             -moz-box-sizing: border-box;
+             box-sizing: border-box;
+         }
+
+         .register__list {
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+         }
+
+         .register__item {
+             display: flex;
+             flex-direction: column;
+         }
+
+         .register__text {
+             font-size: 30px;
+             margin-bottom: 20px;
+         }
+
+         .register__input {
+             width: 90%;
+             background: none;
+             border-bottom: 1px solid #fff;
+             font-size: 20px;
+             color: #fff;
+             padding: 15px 0px;
+         }
+
+         .register__pass {
+             width: 100%;
+             background: none;
+             border-bottom: 1px solid #fff;
+             font-size: 20px;
+             color: #fff;
+             padding: 15px 0px;
+         }
+
+         .register__button {
+             display: flex;
+             justify-content: center;
+         }
+
+         .register__btn {
+             border-radius: 33px;
+             width: 260px;
+             padding: 20px 0px;
+             font-size: 20px;
+             color: #000;
+             transition: .3s;
+         }
+
+         .register__btn:hover {
+             color: #fff;
+             background: #000;
+         }
+     </style>
+</head>
+<body>
+    <div class="wrapper_reg">
+        <main>
+            <section class="register">
+                <div class="container">
+                    <div class="register__inner">
+                        <div class="register__top">
+                            <h1 class="register__title">Регистрация</h1>
+                            <a href="{% url 'home' %}" class="register__logo">JobHub</a>
+                        </div>
+                        <form class="register__form" method="GET" action="{% url 'home' %}">
+                            <ul class="register__list">
+                                <li class="register__item">
+                                    <label class="register__text">Фамилия</label>
+                                    <input type="text" class="register__input" name="last_name">
+                                </li>
+                                <li class="register__item">
+                                    <label class="register__text">Имя</label>
+                                    <input type="text" class="register__input" name="first_name">
+                                </li>
+                            </ul>
+                            <ul class="register__list">
+                                <li class="register__item">
+                                    <label class="register__text">Логин</label>
+                                    <input type="text" class="register__input" name="username">
+                                </li>
+                                <li class="register__item">
+                                    <label class="register__text">Дата рождения</label>
+                                    <input type="text" class="register__input" name="birthdate">
+                                </li>
+                            </ul>
+                            <div class="register__password">
+                                <label class="register__text">Пароль</label>
+                                <input type="password" class="register__pass" name="password">
+                            </div>
+                            <div class="register__button">
+                                <button class="register__btn" type="submit">Зарегистрироваться</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/css/style1.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style2.css' %}">
+    <title>О компании</title>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .wrapper {
+            background-color: #0F0F0F;
+            margin: 0;
+            padding: 0;
+            background-image: url("{% static 'main/img/Group 43.png' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="page_1">
+            <header>
+                <div class="logo"><a href="{% url 'home' %}">JobHub</a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="{% url 'recomendation' %}">Фильтры</a></li>
+                        <li><a href="{% url 'recomendationcompanies' %}">Компании</a></li>
+                        <li><a href="#">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="search_profile">
+                    <div class="search-box">
+                        <button class="btn-search"><img src="{% static 'main/icon/searchIcon.svg' %}" alt="search-icon"></button>
+                        <input type="text" class="input-search" placeholder="">
+                    </div>
+                    <div class="profile"><a href="{% url 'addpage' %}">Профиль</a></div>
+                </div>
+            </header>
+            <div class="content">
+                <div class="account" style="margin-bottom: 10%;">
+                    <img src="{% static 'main/icon/Group 55.png' %}" alt="" />
+                    <div class="name">Itbox</div>
+                    <div class="name_2">@itbox</div>
+                    <div class="information_acc">
+                        <div class="data">
+                            <img src="{% static 'main/icon/Group 45.png' %}" alt="" />
+                            <p style="margin-left: 20px">1 год на рынке</p>
+                        </div>
+                        <div class="loco">
+                            <img src="{% static 'main/icon/Group 45 (1) (1).png' %}" alt="" />
+                            <p style="margin-left: 20px">Екатеринбург</p>
+                        </div>
+                        <div class="email" style="margin-bottom: 20%;">
+                            <img src="{% static 'main/icon/Group 46.png' %}" alt="" />
+                            <p style="margin-left: 20px">info@itbox.pro</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="personal_information_ready_comp">
+                    <div class="title_pers_inf">
+                        <p><a href="ready_profil_comp.html">О компании</a></p>
+                        <p style="margin-left: 80px"><a href="project_comp.html">Проекты</a></p>
+                    </div>
+                    <form action="">
+                        <div class="name_surname">
+                            <label for="">Название компании</label>
+                            <p class="pers_inf">Itbox</p>
+                            <label for="">Город</label>
+                            <p class="pers_inf">Екатеринбург</p>
+                            <label for="">Сколько лет на рынке</label>
+                            <p class="pers_inf">1</p>
+                            <label for="">Почта</label>
+                            <p class="pers_inf">digitallabs@mail.ru</p>
+                            <label for="">ИНН</label>
+                            <p class="pers_inf">122592370090</p>
+                        </div>
+                        <div class="social_media">
+                            <label style="margin-bottom: 10px" for="">Наши ценности</label>
+                            <p class="end_pers_inf">-Люди и атмосфера<br> -Развитие<br>- Профессионализм</p>
+                            <label style="margin-bottom: 10px; margin-top: 3%;">Задачи и направления</label>
+                            <p class="end_pers_inf">- Помогаем создавать надежные IT-системы, которые делают бизнес более продуктивным, умным и конкурентоспособным.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/29d8323478.js" crossorigin="anonymous"></script>
+</body>
+</html>
